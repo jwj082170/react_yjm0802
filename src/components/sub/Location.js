@@ -12,12 +12,26 @@ function Location() {
 		level: 3,
 	};
 
-	//기존의 option객체의 center키값에 등록되어 있는 위치값을 마커의 위치로 지정할 객체 생성
+	//마커의 위치 정보값 설정
 	const markerPosition = option.center;
 
-	//위의 markerPostion을 인수로 해서 마커 정보값 리턴하는 구문 호출
+	//마커의 이미지 정보값 설정
+	const imgSrc =
+		process.env.PUBLIC_URL + '/img/marker1.png';
+	const imgSize = new kakao.maps.Size(232, 99);
+	const imgOpt = {
+		offset: new kakao.maps.Point(116, 99),
+	};
+	const markerImage = new kakao.maps.MarkerImage(
+		imgSrc,
+		imgSize,
+		imgOpt
+	);
+
+	//위의 정보값을 통해 마커 생성
 	const marker = new kakao.maps.Marker({
 		position: markerPosition,
+		image: markerImage,
 	});
 
 	//가상돔 요소가 브라우저에 마운트 되면
