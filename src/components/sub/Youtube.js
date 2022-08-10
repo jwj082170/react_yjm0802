@@ -1,9 +1,12 @@
 import Layout from '../common/Layout';
 import Popup from '../common/Popup';
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 function Youtube() {
+	const icon = useRef(null);
 	const [Vids, setVids] = useState([]);
 	const [Open, setOpen] = useState(false);
 	const [Index, setIndex] = useState(0);
@@ -18,12 +21,20 @@ function Youtube() {
 		});
 	}, []);
 
+	useEffect(() => {
+		console.log(icon);
+	}, [Vids]);
+
 	return (
 		<>
 			<Layout name={'Youtube'}>
 				{Vids.map((vid, idx) => {
 					return (
 						<article key={idx}>
+							<FontAwesomeIcon
+								icon={faTwitter}
+								ref={icon}
+							/>
 							<h2>{vid.snippet.title}</h2>
 							<p>{vid.snippet.description}</p>
 							<img
