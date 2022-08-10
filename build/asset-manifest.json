@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/pf_basic/static/css/main.59541755.css",
+    "main.js": "/pf_basic/static/js/main.366e6f8a.js",
+    "index.html": "/pf_basic/index.html",
+    "main.59541755.css.map": "/pf_basic/static/css/main.59541755.css.map",
+    "main.366e6f8a.js.map": "/pf_basic/static/js/main.366e6f8a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.59541755.css",
+    "static/js/main.366e6f8a.js"
+  ]
+}
