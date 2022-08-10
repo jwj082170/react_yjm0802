@@ -5,9 +5,7 @@ function Header() {
 	return (
 		<header>
 			<h1>
-				<Link exact to='/'>
-					LOGO
-				</Link>
+				<Link to='/'>LOGO</Link>
 			</h1>
 
 			<ul id='gnb'>
