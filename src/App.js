@@ -15,9 +15,14 @@ function App() {
 	return (
 		<>
 			<Header />
-			<Visual />
-			<Department />
-			<Youtube />
+
+			<Route exact path='/'>
+				<Visual />
+			</Route>
+
+			<Route path='/department' component={Department} />
+			<Route path='/youtube' component={Youtube} />
+
 			<Footer />
 		</>
 	);
