@@ -1,5 +1,9 @@
 function Footer() {
-	return <div>Footer</div>;
+	return (
+		<footer>
+			2022 &copy; DCODELAB All rights reserved.
+		</footer>
+	);
 }
 
 export default Footer;
