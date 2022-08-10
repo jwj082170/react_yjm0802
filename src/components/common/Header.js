@@ -19,6 +19,11 @@ function Header(props) {
 						Youtube
 					</NavLink>
 				</li>
+				<li>
+					<NavLink to='/location' activeStyle={style}>
+						Location
+					</NavLink>
+				</li>
 			</ul>
 		</header>
 	);

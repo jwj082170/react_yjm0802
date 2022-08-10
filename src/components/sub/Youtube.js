@@ -31,9 +31,16 @@ function Youtube() {
 		});
 	}, []);
 
+	//의존성 배열에 Vids를 등록했기 때문에 해당 useEffect문은 axios호출이 끝나고 비어있는 Vids 스테이트에 실제 데이터가 담기면서
+	//article이라는 반복돔이 생성되는 순간에 호출됨
+	//article이 생성이 되어야지 만들어지는 fontAwesome요소를 참조했기 때문에 이곳에서만 useRef icon값을 확인 가능함
 	useEffect(() => {
 		console.log(icon);
 	}, [Vids]);
+
+	//최종정리
+	//일반적인 가상돔을 useRef로 참조한 객체는 의존성배열이 비어있는 useEffect안쪽에서 활용가능
+	//스테이트에 의해서 동적으로 생성되는 가상돔안쪽에 있는 참조객체를 활용할때는 해당 스테이트를 의존성 배열로 등록한 useEffect안쪽에서 활용가능
 
 	return (
 		<>
