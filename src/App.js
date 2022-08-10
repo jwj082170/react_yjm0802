@@ -18,12 +18,12 @@ function App() {
 		<>
 			<Switch>
 				<Route exact path='/'>
-					<Header />
+					<Header type={'main'} />
 					<Visual />
 				</Route>
 
 				<Route path='/'>
-					<Header />
+					<Header type={'sub'} />
 				</Route>
 			</Switch>
 
