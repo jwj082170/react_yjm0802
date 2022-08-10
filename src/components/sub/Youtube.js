@@ -1,9 +1,11 @@
 import Layout from '../common/Layout';
+import Popup from '../common/Popup';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
 function Youtube() {
 	const [Vids, setVids] = useState([]);
+	const [Open, setOpen] = useState(false);
 
 	useEffect(() => {
 		const key = 'AIzaSyC77Pd__ju0Wqx_Umc-IuW7Cn2mWi_HVsk';
@@ -16,20 +18,25 @@ function Youtube() {
 	}, []);
 
 	return (
-		<Layout name={'Youtube'}>
-			{Vids.map((vid, idx) => {
-				return (
-					<article key={idx}>
-						<h2>{vid.snippet.title}</h2>
-						<p>{vid.snippet.description}</p>
-						<img
-							src={vid.snippet.thumbnails.standard.url}
-						/>
-						<span>{vid.snippet.publishedAt}</span>
-					</article>
-				);
-			})}
-		</Layout>
+		<>
+			<Layout name={'Youtube'}>
+				{Vids.map((vid, idx) => {
+					return (
+						<article key={idx}>
+							<h2>{vid.snippet.title}</h2>
+							<p>{vid.snippet.description}</p>
+							<img
+								src={vid.snippet.thumbnails.standard.url}
+								onClick={() => setOpen(true)}
+							/>
+							<span>{vid.snippet.publishedAt}</span>
+						</article>
+					);
+				})}
+			</Layout>
+
+			{Open && <Popup setOpen={setOpen}></Popup>}
+		</>
 	);
 }
 
