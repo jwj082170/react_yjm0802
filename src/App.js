@@ -11,6 +11,8 @@ import Visual from './components/main/Visual';
 import Department from './components/sub/Department';
 import Youtube from './components/sub/Youtube';
 
+import './scss/style.scss';
+
 function App() {
 	return (
 		<>
