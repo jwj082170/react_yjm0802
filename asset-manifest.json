@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/pf_basic/static/css/main.f1502cf8.css",
+    "main.js": "/pf_basic/static/js/main.8f14ea26.js",
+    "index.html": "/pf_basic/index.html",
+    "main.f1502cf8.css.map": "/pf_basic/static/css/main.f1502cf8.css.map",
+    "main.8f14ea26.js.map": "/pf_basic/static/js/main.8f14ea26.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f1502cf8.css",
+    "static/js/main.8f14ea26.js"
+  ]
+}
